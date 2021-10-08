@@ -305,6 +305,11 @@ header {
 	background-size: 100%;
 }
 
+.dark .inner-switch {
+  background: url('https://api.iconify.design/emojione-monotone:light-bulb.svg?color=%23e6e6e6') no-repeat;
+  background-size: 100%;
+}
+
 @media (min-width: 992px) {
 	header {
 		max-width: 100%;
@@ -412,9 +417,8 @@ header {
 }
 
 .sitenavigation li a:hover {
-	color: #000;
-	font-weight: 300%;
-	border-bottom: 3px solid #6c757d;
+	font-weight: bolder;
+	border-bottom: 3px solid var(--monet);
 }
 
 .sitenavigation li.clicked>ul {
