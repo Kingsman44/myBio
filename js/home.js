@@ -318,3 +318,9 @@ function set_theme(x) {
     });
 
 }
+
+function open_theme(x) {
+	if (screen.width > 480) {
+		$(x).toggleClass('open');	
+	}
+}

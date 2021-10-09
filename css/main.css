@@ -87,7 +87,7 @@ html[mode='dark'][theme="moth"] {
 }
 
 html[theme="moth"] {
-	--back: #DEDADE;
+	--back: #949194;
 	--monet2: #090C11;
 }
 
@@ -294,7 +294,7 @@ header {
 	animation-fill-mode: both
 }
 
-@-webkit-keyframes fadeInUp {
+@keyframes fadeInUp {
 	0% {
 		opacity: 0;
 		transform: translateY(20px)
@@ -305,14 +305,14 @@ header {
 	}
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInDown {
 	0% {
 		opacity: 0;
-		transform: translateY(20px)
+		transform: translateY(-20px)
 	}
 	to {
 		opacity: 1;
-		transform: translateY(0)
+		transform: translateY(0px)
 	}
 }
 
@@ -327,8 +327,10 @@ header {
 
 .inner-switch {
 	cursor: pointer;
-	display: :block;
+	display: block;
 	text-align: center;
+	position: absolute;
+	right: 0;
 	font-size: 1rem;
 	font-weight: 150;
 	float: right;
@@ -441,6 +443,10 @@ header {
 
 .sitenavigation li.nav-dropdown:hover>a {
 	background-color: #fff;
+}
+
+#nav_theme .open{
+	
 }
 
 .sitenavigation li a {
@@ -561,6 +567,7 @@ header {
 		cursor: pointer;
 		padding: 0;
 	}
+
 	.navbar .sitenavigation.is-tapped>ul #navclose {
 		display: block;
 		position: fixed;
@@ -601,11 +608,36 @@ header {
 		float: left;
 		margin-top: 3px;
 		padding: 20px;
-		color: white;
-		background-color: #534E4A;
+		color: black;
+		background-color: #eee;
 		border-radius: 25px;
 		border: none !important;
 		-webkit-font-smoothing: antialiased;
+	}
+	
+	.navbar .sitenavigation.is-tapped>ul #themes_bar {
+		width: 90%;
+		display: block;
+		float: left;
+		position: fixed;
+		padding: 20px;
+		top: 225px;
+		margin-right: 5%;
+		text-align: center;
+		margin-left: 5%;
+		color: black;
+		background-color: #eee;
+		border-radius: 30px;
+		border: none !important;
+		-webkit-font-smoothing: antialiased;
+	}
+	#themes_bar li {
+		z-index: 110;
+		display: inline-block !important;
+		border-radius: 50%;
+		margin-top: 5px;
+		height: 24px;
+		width: 24px;
 	}
 	.top a {
 		margin-top: 70px !important;
@@ -649,6 +681,36 @@ header {
 
 #time1 {
 	display: none;
+}
+
+#themes_bar {
+	display: inline-block;
+	float: right;
+	color: var(--monet);
+	margin-top: 21px;
+	margin-left: 9px;
+	cursor: pointer;
+}
+
+#themes_bar li {
+	display: none;
+}
+
+.open .move {
+	display: block;
+	background-color: white;
+	margin-top: 21px;
+	padding: 20px;
+	border-radius: 20px;
+	margin-left: -60px;
+	animation: fadeInDown 1s;
+}
+
+.open li {
+	margin-left: 2px;
+	text-align: center;
+	display: inline-block !important;
+	animation: fadeInDown 1s;
 }
 
 .navbar {
@@ -876,7 +938,7 @@ header {
 	background-color: #EDF3D3;
 	height: 24px;
 	width: 24px;
-	border-style: solid;
+	border: solid 1px;
 	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
@@ -886,7 +948,7 @@ header {
 	background-color: #fad8af;
 	height: 24px;
 	width: 24px;
-	border-style: solid;
+	border: solid 1px;
 	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
@@ -896,7 +958,7 @@ header {
 	background-color: #9F7D94;
 	height: 24px;
 	width: 24px;
-	border-style: solid;
+	border: solid 1px;
 	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
@@ -906,7 +968,7 @@ header {
 	background-color: #DB897B;
 	height: 24px;
 	width: 24px;
-	border-style: solid;
+	border: solid 1px;
 	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
@@ -916,7 +978,7 @@ header {
 	background-color: #DEDADE;
 	height: 24px;
 	width: 24px;
-	border-style: solid;
+	border: solid 1px;
 	border-color: black;
 	border-radius: 50%;
 	cursor: pointer;
