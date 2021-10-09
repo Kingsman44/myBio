@@ -30,6 +30,11 @@ if (localStorage.hasOwnProperty('theme')) {
 
 var theme = document.documentElement.getAttribute('theme');
 
+var s=document.getElementsByClassName(theme);
+for(var i=0, len=s.length; i<len; i++) {
+	s[i].style["border"] = "solid 3px";
+}
+
 function themes() {
     if (theme == "lily") {
         monet = "#3c4219";
@@ -310,6 +315,19 @@ function set_theme(x) {
     } else if (x == "moth") {
         monet = "#3D3C46";
     }
+	s=document.getElementsByClassName(x);
+	for(var i=0, len=s.length; i<len; i++) {
+        s[i].style["border"] = "solid 3px";
+    }
+	s1=['lily','pin','helle','orchid','moth'];
+	s1.forEach(function (item, index) {
+		if (item != x) {
+			k=document.getElementsByClassName(item);
+			for(var l=0, len=k.length; l<len; l++) {
+				k[l].style["border"] = "solid 1px";
+			}
+		}
+    });
     localStorage.setItem('theme', x);
     $.each(pJSDom[0].pJS.particles.array, function(i, p) {
         pJSDom[0].pJS.particles.array[i].color.value = monet;
