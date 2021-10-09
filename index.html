@@ -4,27 +4,17 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title id="title">Shivan Singh</title>
-      <link href="https://fonts.googleapis.com/css?family=Product+Sans" rel="stylesheet" type="text/css">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
       <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
-      <script type="text/javascript">
-         function googleTranslateElementInit() {
-           new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'bn,en,hi,mr,ml,pa,sd,ta,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-         }
-      </script>
-      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      <meta name="google-translate-customization" content="cf4fd9d6a9e017d5-7c969e45eba53879-g303b6a4c71095c23-1c">
-      </meta>
       <link rel="stylesheet" href="./css/main.css">
-      <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/bacteria-and-viruses-filled/64/bacteria_virus-01-512.png" type="image/x-icon" sizes="192x192">
+      <link rel="icon" class="main_icon" href="./images/icon.png" type="image/x-icon" sizes="256x256">
    </head>
    <header>
       <nav class="navbar monet">
          <b>
             <span class="inner-switch"></span>
-            <li style="list-style-type: none; float: right;" id="google_translate_element"></li>
             <div id="nav" class="sitenavigation">
                <span class="menu-icon">
                   <a href="#" class="menu"><span></span></a>
@@ -35,13 +25,31 @@
                   </div>
                </span>
                <ul style="height: 60px;">
-			   <div id="time1"></div>
-			   <div class="task"></div>
-			   <div id="navclose"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/></svg></div>
+                  <div id="time1"></div>
+                  <div class="task"></div>
+                  <div id="navclose">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/>
+                     </svg>
+                  </div>
+                  <ul class="media">
+                     <li><span class="material-icons">
+                        network_wifi
+                        </span>
+                     </li>
+                     <li><span class="material-icons">
+                        signal_cellular_4_bar
+                        </span>
+                     </li>
+                     <li><span class="material-icons">
+                        battery_full
+                        </span>
+                     </li>
+                  </ul>
                   <li class="selected top left"><a href="/">Home</a></li>
                   <li class="top right"><a href="#">Projects</a></li>
                   <li class="left"><a href="#">Education</a></li>
-				  <li class="right"><a href="#">Experience</a></li>
+                  <li class="right"><a href="#">Experience</a></li>
                </ul>
             </div>
       </nav>
@@ -54,22 +62,24 @@
             <div class="phone">
                <div id="day" onload="showTime()"></div>
                <div id="time" onload="showTime()"></div>
-			   <ul class="theme-icon">
-			   <li class="lily" onclick="set_theme('lily')"></li>
-			   <li class="pin" onclick="set_theme('pin')"></li>
-			   <li class="helle" onclick="set_theme('helle')"></li>
-			   <li class="orchid" onclick="set_theme('orchid')"></li>
-			   <li class="moth" onclick="set_theme('moth')"></li>
-			   </ul>
-			   <div class="themes">Themes</div>
-            </div><div class="col"></div>
-            <div class="text hi">Hi,</div><br>
+               <ul class="theme-icon">
+                  <li class="lily" onclick="set_theme('lily')"></li>
+                  <li class="pin" onclick="set_theme('pin')"></li>
+                  <li class="helle" onclick="set_theme('helle')"></li>
+                  <li class="orchid" onclick="set_theme('orchid')"></li>
+                  <li class="moth" onclick="set_theme('moth')"></li>
+               </ul>
+               <div class="themes">Themes</div>
+            </div>
+            <div class="col"></div>
+            <div class="text hi">Hi,</div>
+            <br>
             <div class="text me">I am Shivan singh</div>
             <br>
             <div>
                <span class="text work">Currently working on
                <span class="animated-text" 
-                  words="Android, Html, Css, JavaScript, Python, Java"></span>&nbsp.
+                  words="Android, Html, CSS, JavaScript, Python, Java"></span>
                </span>
                <ul class="social">
                   <li>
@@ -100,7 +110,7 @@
             </div>
          </div>
       </div>
-	  <br><br>
+      <br><br>
    </body>
    <script src="./js/home.js"></script>
 </html>

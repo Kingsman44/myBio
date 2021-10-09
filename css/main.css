@@ -12,6 +12,11 @@ html[mode='light'][theme="lily"] {
 	--url: url('../images/lily.png') no-repeat;
 }
 
+html[theme="lily"] {
+	--back: #EFF3D3;
+	--monet2: #535C23;
+}
+
 html[mode='dark'][theme="lily"] {
 	--background: #101206;
 	--monet: #A9B073;
@@ -30,6 +35,11 @@ html[mode='dark'][theme="orchid"] {
 	--url: url('../images/orchid-dark.png') no-repeat;
 }
 
+html[theme="orchid"] {
+	--back: #DB897B;
+	--monet2: #521F16;
+}
+
 html[mode='light'][theme="pin"] {
 	--background: #fad8af;
 	--monet: #482B0D;
@@ -40,6 +50,11 @@ html[mode='dark'][theme="pin"] {
 	--background: #150B03;
 	--monet: #fad8af;
 	--url: url('../images/pin-dark.png') no-repeat;
+}
+
+html[theme="pin"] {
+	--back: #FAD8AF;
+	--monet2: #482B0D;
 }
 
 html[mode='light'][theme="helle"] {
@@ -54,6 +69,11 @@ html[mode='dark'][theme="helle"] {
 	--url: url('../images/helle-dark.png') no-repeat;
 }
 
+html[theme="helle"] {
+	--back: #9F7D94;
+	--monet2: #2A1823;
+}
+
 html[mode='light'][theme="moth"] {
 	--background: #DEDADE;
 	--monet: #3D3C46;
@@ -64,6 +84,11 @@ html[mode='dark'][theme="moth"] {
 	--background: #090C11;
 	--monet: #BFCADB;
 	--url: url('../images/moth-dark.png') no-repeat;
+}
+
+html[theme="moth"] {
+	--back: #DEDADE;
+	--monet2: #3D3C46;
 }
 
 html {
@@ -306,11 +331,11 @@ header {
 }
 
 .dark .inner-switch {
-  background: url('https://api.iconify.design/emojione-monotone:light-bulb.svg?color=%23e6e6e6') no-repeat;
-  background-size: 100%;
+	background: url('https://api.iconify.design/emojione-monotone:light-bulb.svg?color=%23e6e6e6') no-repeat;
+	background-size: 100%;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 480px) {
 	header {
 		max-width: 100%;
 		margin-left: auto;
@@ -461,7 +486,7 @@ header {
 	border-bottom: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 480px) {
 	.navbar {
 		width: 100%;
 		position: absolute;
@@ -506,12 +531,11 @@ header {
 		background-color: #2A2A2A;
 		margin: 0;
 		right: 0;
+		top: 0;
 		width: 100%;
-		bottom: 0px;
-		height: 100%!important;
+		height: 80%!important;
 		left: 0;
 		z-index: 100;
-		margin-top: 100px;
 		padding: 0;
 	}
 	.navbar .sitenavigation.is-tapped>ul .task {
@@ -523,13 +547,12 @@ header {
 		right: 0;
 		width: 100%;
 		bottom: 0px;
-		height: 55%!important;
+		height: 65%!important;
 		left: 0;
 		z-index: 101;
 		margin-top: 10px;
 		padding: 0;
 	}
-	
 	.navbar .sitenavigation.is-tapped>ul #time1 {
 		display: block;
 		position: fixed;
@@ -542,12 +565,12 @@ header {
 		cursor: pointer;
 		padding: 0;
 	}
-	
 	.navbar .sitenavigation.is-tapped>ul #navclose {
 		display: block;
-		position: absolute;
+		position: fixed;
 		border-radius: 30px;
-		top: 45%;
+		top: 35%;
+		width: 60px;
 		z-index: 105;
 		padding: 10px;
 		left: 0;
@@ -557,27 +580,42 @@ header {
 		text-align: center;
 		margin-top: 10px;
 	}
-	
 	#navclose svg {
-		fill: #2A2A2A;
+		fill: #CA594B;
 	}
-	
+	.navbar .sitenavigation.is-tapped>ul .media {
+		display: inline-block;
+		top: 48px;
+		padding-right: 10px;
+		text-align: right;
+		z-index: 110;
+	}
+	.media li {
+		display: inline-block;
+		color: white;
+	}
+	.media li span {
+		color: white;
+		display: inline-block;
+		font-size: 16px;
+		padding: 0 !important;
+	}
 	.navbar .sitenavigation.is-tapped>ul a {
 		width: 45%;
 		float: left;
-		margin-top:3px;
+		margin-top: 3px;
 		padding: 20px;
+		line-height: 10%;
+		height: 10%;
 		color: white;
 		background-color: #534E4A;
 		border-radius: 25px;
 		border: none !important;
 		-webkit-font-smoothing: antialiased;
 	}
-	
 	.top a {
 		margin-top: 70px !important;
 	}
-
 	.right a {
 		margin-right: 2%;
 		margin-left: 0.5%;
@@ -590,14 +628,8 @@ header {
 		border-bottom: none!important;
 	}
 	.selected a {
-		color: var(--color)!important;
-		background-color: var(--background)!important;
-	}
-	.navbar .sitenavigation.is-tapped>ul a:hover {
-		background-color: #ddd;
-	}
-	.selected a:hover {
-		background-color: rgba(25, 103, 210, 0.25)!important;
+		color: var(--monet2) !important;
+		background-color: var(--back)!important;
 	}
 	.navbar .sitenavigation.is-tapped>ul li {
 		width: 100%;
@@ -611,6 +643,10 @@ header {
 		padding: 0;
 		position: relative !important;
 	}
+}
+
+.media {
+	display: none;
 }
 
 #navclose {
@@ -638,90 +674,6 @@ header {
 	text-align: center;
 	text-decoration: none;
 	padding: 19px 16px;
-}
-
-.goog-logo-link {
-	display: none !important;
-}
-
-.goog-te-gadget {
-	color: transparent !important;
-}
-
-.goog-te-banner-frame.skiptranslate {
-	display: none !important;
-}
-
-body {
-	top: 0px !important;
-}
-
-.goog-te-gadget-simple {
-	background-color: transparent!important;
-	border: 0px solid rgba(255, 255, 255, 0.50) !important;
-	padding: 0px!important;
-	border-radius: 0px!important;
-	width: auto;
-	font-size: 1rem!important;
-	line-height: 1rem!important;
-	display: inline-block;
-	cursor: pointer;
-	zoom: 1;
-}
-
-.goog-te-gadget {
-	height: 60px !important;
-	margin-bottom: -7px;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value img {
-	text-decoration: none;
-	display: none;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value {
-	margin-left: 0px!important;
-	background-color: transparent !important;
-	color: var(--monet)!important;
-	margin-right: 0px!important;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value span {
-	text-decoration: none;
-	background-color: transparent !important;
-	color: var(--monet)!important;
-	border-left: none!important;
-}
-
-.goog-te-gadget img {
-	display: none;
-	border: none;
-}
-
-#google_translate_element {
-	background-color: transparent!important;
-}
-
-#google_translate_element::marker {
-	display: none!important;
-}
-
-#goog-gt-tt {
-	display: none !important;
-}
-
-.goog-tooltip {
-	display: none !important;
-}
-
-.goog-tooltip:hover {
-	display: none !important;
-}
-
-.goog-text-highlight {
-	background-color: transparent !important;
-	border: none !important;
-	box-shadow: none !important;
 }
 
 .phone {
@@ -775,6 +727,9 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+	header {
+		padding: 0;
+	}
 	.phone {
 		text-align: center;
 		right: 50%;
@@ -839,7 +794,6 @@ body {
 	.theme-icon {
 		top: 85% !important;
 	}
-	
 	.themes {
 		top: 80% !important;
 	}
@@ -922,7 +876,6 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 
 .lily {
 	background-color: #EDF3D3;
@@ -1027,4 +980,21 @@ body {
 
 .social svg {
 	fill: var(--monet);
+}
+
+.main_icon svg {
+	fill: var(--monet);
+}
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/materialicons/v109/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
 }
