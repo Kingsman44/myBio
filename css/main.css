@@ -14,7 +14,7 @@ html[mode='light'][theme="lily"] {
 
 html[theme="lily"] {
 	--back: #EFF3D3;
-	--monet2: #535C23;
+	--monet2: #101206;
 }
 
 html[mode='dark'][theme="lily"] {
@@ -37,7 +37,7 @@ html[mode='dark'][theme="orchid"] {
 
 html[theme="orchid"] {
 	--back: #DB897B;
-	--monet2: #521F16;
+	--monet2: #140806;
 }
 
 html[mode='light'][theme="pin"] {
@@ -54,7 +54,7 @@ html[mode='dark'][theme="pin"] {
 
 html[theme="pin"] {
 	--back: #FAD8AF;
-	--monet2: #482B0D;
+	--monet2: #150B03;
 }
 
 html[mode='light'][theme="helle"] {
@@ -71,7 +71,7 @@ html[mode='dark'][theme="helle"] {
 
 html[theme="helle"] {
 	--back: #9F7D94;
-	--monet2: #2A1823;
+	--monet2: #180E14;
 }
 
 html[mode='light'][theme="moth"] {
@@ -88,7 +88,7 @@ html[mode='dark'][theme="moth"] {
 
 html[theme="moth"] {
 	--back: #DEDADE;
-	--monet2: #3D3C46;
+	--monet2: #090C11;
 }
 
 html {
@@ -316,6 +316,15 @@ header {
 	}
 }
 
+@keyframes Up {
+	0% {
+		transform: translateY(-500px)
+	}
+	to {
+		transform: translateY(0)
+	}
+}
+
 .inner-switch {
 	cursor: pointer;
 	display: :block;
@@ -528,31 +537,18 @@ header {
 	.navbar .sitenavigation.is-tapped>ul {
 		display: block;
 		position: fixed;
-		background-color: #2A2A2A;
+		background-color: var(--monet2);
 		margin: 0;
 		right: 0;
 		top: 0;
+		animation: Up 1s ease-out;
 		width: 100%;
-		height: 80%!important;
+		height: 100%!important;
 		left: 0;
 		z-index: 100;
 		padding: 0;
 	}
-	.navbar .sitenavigation.is-tapped>ul .task {
-		display: block;
-		position: fixed;
-		background-color: #F5F1EA;
-		border-radius: 20px 20px 0px 0px;
-		margin: 0;
-		right: 0;
-		width: 100%;
-		bottom: 0px;
-		height: 65%!important;
-		left: 0;
-		z-index: 101;
-		margin-top: 10px;
-		padding: 0;
-	}
+	
 	.navbar .sitenavigation.is-tapped>ul #time1 {
 		display: block;
 		position: fixed;
@@ -569,7 +565,7 @@ header {
 		display: block;
 		position: fixed;
 		border-radius: 30px;
-		top: 35%;
+		bottom: 20px;
 		width: 60px;
 		z-index: 105;
 		padding: 10px;
@@ -605,8 +601,6 @@ header {
 		float: left;
 		margin-top: 3px;
 		padding: 20px;
-		line-height: 10%;
-		height: 10%;
 		color: white;
 		background-color: #534E4A;
 		border-radius: 25px;
@@ -685,7 +679,7 @@ header {
 	height: 540px;
 	width: 260px;
 	background: var(--url);
-	transition: background 1.5s linear;
+	transition: background 1.2s linear;
 	background-size: 100%;
 }
 
