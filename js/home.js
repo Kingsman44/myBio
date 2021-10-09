@@ -182,6 +182,12 @@ if (allElements.length > 0) {
     });
 }
 
+if (screen.width < 501) {
+	onclick_on=false;
+} else {
+	onclick_on=true;
+}
+
 // Background Animation
 animation = {
     "particles": {
@@ -255,7 +261,7 @@ animation = {
                 "mode": "repulse"
             },
             "onclick": {
-                "enable": true,
+                "enable": onclick_on,
                 "mode": "push"
             },
             "resize": true
