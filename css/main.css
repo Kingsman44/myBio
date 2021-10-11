@@ -172,7 +172,7 @@ ul {
 
 @keyframes Up {
 	0% {
-		transform: translateY(-500px)
+		transform: translateY(-100%)
 	}
 	to {
 		transform: translateY(0)
@@ -184,7 +184,7 @@ ul {
 		transform: translateY(0px)
 	}
 	to {
-		transform: translateY(-500px)
+		transform: translateY(-100%)
 	}
 }
 
