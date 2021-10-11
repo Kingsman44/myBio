@@ -5,45 +5,31 @@
 	}
 }
 
-@media screen and (min-width: 1080px) {
-	.dark .inner-switch:hover {
-		background: url('https://api.iconify.design/emojione-light-bulb.svg') no-repeat;
-		background-size: 100%;
-	}
-	.inner-switch:hover {
-		background: url('https://api.iconify.design/emojione-monotone:light-bulb.svg') no-repeat;
-		background-size: 100%;
-	}
-}
-
-@media screen and (min-width: 401px) {
-	.inner-switch {
-		position: relative;
-		float: right;
-	}
-}
-
 .inner-switch {
-	cursor: pointer;
-	display: block;
-	text-align: center;
-	position: absolute;
-	right: 0;
-	font-size: 1rem;
-	font-weight: 150;
-	float: right;
-	height: 50px;
-	width: 50px;
-	transform: rotate(180deg);
-	background: url('https://api.iconify.design/emojione-light-bulb.svg') no-repeat;
-	background-size: 100%;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: 5px;
+    border-radius: 10px;
+    padding: 10px 12.5px;
+    color: var(--background);
+    background-color: var(--monet);
+    bottom: 10px;
+    /* font-size: 1rem; */
+    font-weight: bolder;
+    float: right;
+    vertical-align: middle;
+    /* height: 50px; */
+    /* width: 50px; */
+    /* transform: rotate(180deg); */
+    /* background: url('https://api.iconify.design/emojione-light-bulb.svg') no-repeat; */
+    background-size: 100%;
 }
 
-.dark .inner-switch {
-	background: url('https://api.iconify.design/emojione-monotone:light-bulb.svg?color=%23e6e6e6') no-repeat;
-	background-size: 100%;
+.inner-switch svg {
+	stroke: var(--background);
 }
-
 
 #hamburger {
 	width: 30px;
@@ -132,16 +118,16 @@
 	background-color: #fff;
 }
 
-.sitenavigation li a {
-	text-decoration: none;
-	display: block;
-	padding: 11px 14px;
-	font-size: 0.9375em;
+.sitenavigation li:hover>a {
+	font-weight: bolder;
+	background-color: var(--monet);
+	color: var(--background);
+	padding: 10px;
+	border-radius: 10px;
 }
 
-.sitenavigation li a:hover {
-	font-weight: bolder;
-	border-bottom: 3px solid var(--monet);
+.sitenavigation li:hover  {
+	padding: 9px 6px!important;
 }
 
 .sitenavigation li.clicked>ul {
@@ -176,8 +162,15 @@
 	display: none;
 }
 
+.sitenavigation .selected a {
+	background-color: var(--monet);
+	color: var(--background);
+	padding: 10px;
+	border-radius: 10px;
+}
+
 .sitenavigation .selected {
-	border-bottom: 3px solid var(--monet);
+	padding: 9px 6px!important;
 }
 
 .sitenavigation .selected:hover {
@@ -269,7 +262,7 @@
 		margin-top: 10px;
 	}
 	#navclose svg {
-		fill: #CA594B;
+		fill: var(--back);
 	}
 	.navbar .sitenavigation.is-tapped>ul .media {
 		display: inline-block;
@@ -312,6 +305,7 @@
 		left: unset;
 		transform: unset;
 		bottom: unset;
+		right: unset;
 		top: 225px;
 		margin-right: 5%;
 		text-align: center;
@@ -330,24 +324,8 @@
 		height: 24px;
 		width: 24px;
 	}
-	.navbar .sitenavigation #themes_bar {
-		float: none;
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		color: var(--background);
-		padding: 5px;
-		bottom: 15px;
-		border-radius: 5px;
-		background-color: var(--monet);
-		margin-left: 0px;
-		display: block;
-	}
-	#themes_bar.open {
-		transform: translate(-50%,-20%)!important;
-		bottom: unset!important;
-		height: 31px;
-		width: 64.39px;
+	.navbar .sitenavigation.is-tapped>ul .fa {
+		display: none !important;
 	}
 	.top a {
 		margin-top: 70px !important;
@@ -394,16 +372,28 @@
 }
 
 #themes_bar {
-	display: inline-block;
-	float: right;
-	color: var(--monet);
-	margin-top: 21px;
-	margin-left: 9px;
-	cursor: pointer;
+    display: inline-block;
+    float: none;
+    position: absolute;
+    right: 51px;
+    color: var(--background);
+    padding: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    background-color: var(--monet);
+    margin-left: 0px;
+    cursor: pointer;
 }
 
 #themes_bar li {
 	display: none;
+}
+
+#themes_bar.open {
+	transform: translateY(23%)!important;
+	bottom: unset!important;
+	width: 94.36px;
+	height: 41px;
 }
 
 .open .move {
@@ -422,12 +412,14 @@
 	text-align: center;
 	display: inline-block !important;
 	animation: fadeInDown 0.5s;
+	padding: 0px !important;
 }
 
 .navbar {
 	display: block;
-	position: fixed;
-	background-color: var(--background);
+	position: absolute;
+	height: 60px;
+	/* background-color: var(--background); */
 	top: 0;
 	width: 100%;
 	max-width: 100%;
@@ -440,5 +432,8 @@
 	color: var(--monet);
 	text-align: center;
 	text-decoration: none;
+}
+
+.navbar li {
 	padding: 19px 16px;
 }

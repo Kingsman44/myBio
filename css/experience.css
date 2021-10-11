@@ -15,4 +15,5 @@ body {
 header {
 	position: relative;
 	padding: 2vh 0;
+	height: 62px;
 }

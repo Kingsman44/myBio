@@ -34,11 +34,15 @@ $(".inner-switch").on("click", function() {
     if ($("body").hasClass("dark")) {
         $("body").removeClass("dark");
         $("html").removeClass("dark");
+		$("#mode").removeClass("fa-sun-o");
+		$("#mode").addClass("fa-moon-o");
         document.documentElement.setAttribute('mode', 'light');
         localStorage.setItem('lightmode', 'true');
     } else {
         $("body").addClass("dark");
         $("html").addClass("dark");
+		$("#mode").removeClass("fa-moon-o");
+		$("#mode").addClass("fa-sun-o");
         document.documentElement.setAttribute('mode', 'dark');
         localStorage.setItem('lightmode', 'false');
     }
@@ -47,9 +51,13 @@ $(".inner-switch").on("click", function() {
 if (localStorage.getItem('lightmode') === 'true') {
     $("body").removeClass("dark");
     $("html").removeClass("dark");
+	$("#mode").removeClass("fa-sun-o");
+	$("#mode").addClass("fa-moon-o");
     document.documentElement.setAttribute('mode', 'light');
 } else {
     document.documentElement.setAttribute('mode', 'dark');
+	$("#mode").removeClass("fa-moon-o");
+	$("#mode").addClass("fa-sun-o");
 }
 
 if (localStorage.hasOwnProperty('theme')) {
