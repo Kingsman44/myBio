@@ -96,8 +96,12 @@ $('.menu-icon').click(function() {
 });
 
 $('#navclose').click(function() {
-	$("#nav").removeClass('is-tapped');
+	$("#anim").addClass('down');
+	var wait = window.setTimeout(function() {
+    $("#anim").removeClass('down');
+    $("#nav").removeClass('is-tapped');
 	$("#hamburger").removeClass('open');
+  }, 1000);
 });
 
 // Nav Bar Phone Clock
@@ -275,7 +279,15 @@ function set_theme(x) {
 
 function open_theme(x) {
 	if (!$('.sitenavigation').hasClass('is-tapped')) {
-		$(x).toggleClass('open');	
+		if ($(x).hasClass('open')) {
+		$('#anim2').addClass('fadeInUp2');
+			var wait = window.setTimeout(function() {
+				$(x).removeClass('open');
+				$('#anim2').removeClass('fadeInUp2');
+			}, 250);
+		} else {
+			$(x).addClass('open');
+		}
 	}
 }
 

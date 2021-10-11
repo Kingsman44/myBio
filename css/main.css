@@ -148,6 +148,17 @@ ul {
 	}
 }
 
+@keyframes fadeInUp2 {
+	0% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-20px)
+	}
+}
+
 @keyframes fadeInDown {
 	0% {
 		opacity: 0;
@@ -168,13 +179,41 @@ ul {
 	}
 }
 
-.fadeInUp {
-	-webkit-animation-name: fadeInUp;
-	animation-name: fadeInUp;
-	-webkit-animation-duration: .45s;
+@keyframes Down {
+	0% {
+		transform: translateY(0px)
+	}
+	to {
+		transform: translateY(-500px)
+	}
+}
+
+.down {
+	animation-name: Down!important;
+	animation-duration: 1s;
+}
+
+.fadeInDown {
+	animation-name: fadeInDown!important;
 	animation-duration: .45s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both
+}
+
+.fadeInUp2 {
+	-webkit-animation-name: fadeInUp2!important;
+	animation-name: fadeInUp2!important;
+	-webkit-animation-duration: .45s!important;
+	animation-duration: .45s!important;
+	-webkit-animation-fill-mode: both!important;
+	animation-fill-mode: both!important;
+}
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp!important;
+	animation-name: fadeInUp!important;
+	-webkit-animation-duration: .45s!important;
+	animation-duration: .45s!important;
+	-webkit-animation-fill-mode: both!important;
+	animation-fill-mode: both!important;
 }
 
 .lily {
