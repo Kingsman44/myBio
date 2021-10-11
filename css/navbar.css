@@ -189,6 +189,7 @@
 		width: 100%;
 		position: absolute;
 		top: 0;
+		height: 60px;
 		left: 0;
 		right: 0;
 		position: fixed;
@@ -203,23 +204,24 @@
 	.navbar .menu-icon {
 		width: 30px;
 		height: 25px;
-		padding-top: 0;
+		padding-top: 0px;
+		vertical-align: top;
 		margin-top: 7px;
-		display: block;
+		display: inline-block;
 		padding: 5px;
-		padding-top: 1px;
 		padding-bottom: 12px;
 		margin-bottom: 10px;
 		cursor: pointer;
 	}
 	.navbar .sitenavigation ul {
-		display: none;
+		display: inline-block;
+		float: none;
+		height: auto !important;
 		max-width: none !important;
 	}
 	.navbar .sitenavigation li {
 		float: none;
-		display: inline!important;
-		border-radius: 0 66px 66px 0;
+		display: none;
 		margin: 0;
 		padding: 0;
 	}
@@ -276,6 +278,9 @@
 		text-align: right;
 		z-index: 110;
 	}
+	.navbar .sitenavigation.is-tapped>ul li {
+		display: inline !important;
+	}
 	.media li {
 		display: inline-block;
 		color: white;
@@ -304,6 +309,9 @@
 		float: left;
 		position: fixed;
 		padding: 20px;
+		left: unset;
+		transform: unset;
+		bottom: unset;
 		top: 225px;
 		margin-right: 5%;
 		text-align: center;
@@ -314,13 +322,32 @@
 		border: none !important;
 		-webkit-font-smoothing: antialiased;
 	}
-	#themes_bar li {
+	.navbar .sitenavigation.is-tapped>ul #themes_bar li {
 		z-index: 110;
 		display: inline-block !important;
 		border-radius: 50%;
 		margin-top: 5px;
 		height: 24px;
 		width: 24px;
+	}
+	.navbar .sitenavigation #themes_bar {
+		float: none;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		color: var(--background);
+		padding: 5px;
+		bottom: 15px;
+		border-radius: 5px;
+		background-color: var(--monet);
+		margin-left: 0px;
+		display: block;
+	}
+	#themes_bar.open {
+		transform: translate(-50%,-20%)!important;
+		bottom: unset!important;
+		height: 31px;
+		width: 64.39px;
 	}
 	.top a {
 		margin-top: 70px !important;
@@ -382,6 +409,7 @@
 .open .move {
 	display: block;
 	background-color: white;
+	width: max-content;
 	margin-top: 21px;
 	padding: 20px;
 	border-radius: 20px;

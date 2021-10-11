@@ -84,6 +84,7 @@ themes();
 $('.menu-icon').click(function() {
 	$(this).parent().toggleClass('is-tapped');
 	$('#hamburger').toggleClass('open');
+	$('#themes_bar').removeClass('open');
 });
 
 $('#navclose').click(function() {
@@ -265,7 +266,7 @@ function set_theme(x) {
 }
 
 function open_theme(x) {
-	if (screen.width > 480) {
+	if (!$('.sitenavigation').hasClass('is-tapped')) {
 		$(x).toggleClass('open');	
 	}
 }
