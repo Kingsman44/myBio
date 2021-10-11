@@ -1,0 +1,287 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: var(--background);
+	font-size: 1rem;
+	overflow-x: hidden;
+}
+
+header {
+	position: relative;
+	padding: 2vh 0;
+}
+
+.heading {
+	/* color: var(--monet); */
+	display: block;
+	margin-top: 60px;
+	font-weight: 900;
+}
+
+.heading .text {
+	margin-left: 10%;
+	color: var(--monet);
+	/* font-size: 10rem; */
+	display: inline;
+}
+
+.phone {
+	display: flex;
+	position: relative;
+	float: right;
+	right: 5%;
+	margin: auto;
+	height: 540px;
+	width: 260px;
+	background: var(--url);
+	transition: background 1.2s linear;
+	background-size: 100%;
+}
+
+@media screen and (max-width: 739px) {
+	.phone {
+		right: 2%;
+		height: 480px;
+		width: 220px;
+	}
+	.heading .text {
+		margin-left: 2%;
+	}
+	.social {
+		margin-left: 2% !important;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.phone {
+		right: 1%;
+		height: 455px;
+		width: 200px;
+	}
+	.hi {
+		font-size: 5rem !important;
+		padding-left: 7px;
+	}
+	.me {
+		font-size: 2.3rem !important;
+	}
+	.work {
+		font-size: 1.2rem !important;
+	}
+	.theme-icon {
+		top: 75% !important;
+	}
+	.themes {
+		top: 67% !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	header {
+		padding: 0;
+	}
+	.phone {
+		text-align: center;
+		right: 50%;
+		transform: translate(50%);
+		height: 670px;
+		width: 340px;
+	}
+	#time {
+		top: 15% !important;
+	}
+	#day {
+		top: 16% !important;
+	}
+	.col {
+		height: 200px;
+		width: 260px;
+		background-color: var(--background);
+		border-radius: 30px;
+		top: 200px;
+		position: fixed;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.text {
+		margin-left: 0px !important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		top: 120px;
+	}
+	.hi {
+		margin-left: 0px !important;
+		font-size: 4rem !important;
+		padding-left: 0px !important;
+		top: 200px;
+	}
+	.work {
+		padding-left: 0px !important;
+		top: 310px;
+	}
+	.me {
+		line-height: 1;
+		top: 300px;
+		font-size: 2.1rem !important;
+		padding-left: 0px !important;
+	}
+	.social {
+		margin-left: 0px !important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		top: 340px;
+	}
+	.theme-icon {
+		top: 85% !important;
+	}
+	.themes {
+		top: 80% !important;
+	}
+}
+
+.hi {
+	font-size: 10rem;
+}
+
+.work {
+	padding-left: 10px;
+	display: inline;
+	font-size: 1.5rem;
+}
+
+.me {
+	margin-top: -30px;
+	padding-left: 10px;
+	font-size: 3rem;
+	display: inline-block;
+}
+
+#time {
+	background-color: var(--background);
+	height: 75px;
+	width: 120px;
+	vertical-align: middle;
+	padding: 24px 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	color: var(--monet);
+	font-size: 30px;
+	font-weight: 500%;
+	border-radius: 110px;
+	text-align: center;
+	position: absolute;
+	top: 30%;
+}
+
+#day {
+	font-size: 18px;
+	font-weight: 900%;
+	color: var(--color) !important;
+	border-radius: 110px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: 31%;
+	z-index: 1;
+}
+
+.theme-icon {
+	position: absolute;
+	top: 80%;
+	left: 0;
+	right: 0;
+	width: 160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.themes {
+	position: absolute;
+	top: 74%;
+	background-color: var(--background);
+	color: var(--monet);
+	border-radius: 20px;
+	left: 0;
+	right: 0;
+	height: 25px;
+	width: 70px;
+	font-size: 1.1rem;
+	text-align: center;
+	font-weight: bolder;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.theme-icon li {
+	display: inline-block;
+}
+
+.theme-icon li+li {
+	margin-left: 5px;
+}
+
+.animated-text span {
+	display: none;
+	line-height: 1;
+}
+
+.animated-text span.active {
+	display: inline;
+}
+
+.animated-text:after {
+	content: "|";
+	display: inline;
+	width: 4px;
+	text-indent: 0;
+}
+
+.datawords {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.social {
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-left: 10%;
+}
+
+.social li {
+	display: inline-block;
+}
+
+.social li+li {
+	margin-left: 1px;
+}
+
+.social svg {
+	fill: var(--monet);
+}
+
+.main_icon svg {
+	fill: var(--monet);
+}
