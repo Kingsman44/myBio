@@ -7,6 +7,7 @@ html[mode='dark'] {
 }
 
 html[mode='light'][theme="lily"] {
+	--monet3:#323b07;
 	--background: #EDF3D3;
 	--monet: #535C23;
 	--url: url('../images/lily.webp') no-repeat;
@@ -15,6 +16,7 @@ html[mode='light'][theme="lily"] {
 html[theme="lily"] {
 	--back: #EFF3D3;
 	--monet2: #101206;
+	--monet3: #DDED8D;
 }
 
 html[mode='dark'][theme="lily"] {
@@ -26,6 +28,7 @@ html[mode='dark'][theme="lily"] {
 html[mode='light'][theme="orchid"] {
 	--background: #DB897B;
 	--monet: #521F16;
+	--monet3: #521F16;
 	--url: url('../images/orchid.webp') no-repeat;
 }
 
@@ -38,11 +41,13 @@ html[mode='dark'][theme="orchid"] {
 html[theme="orchid"] {
 	--back: #DB897B;
 	--monet2: #140806;
+	--monet3: #DB897B;
 }
 
 html[mode='light'][theme="pin"] {
 	--background: #fad8af;
 	--monet: #482B0D;
+	--monet3: #482B0D;
 	--url: url('../images/pin.webp') no-repeat;
 }
 
@@ -55,6 +60,7 @@ html[mode='dark'][theme="pin"] {
 html[theme="pin"] {
 	--back: #FAD8AF;
 	--monet2: #150B03;
+	--monet3: #fad8af;
 }
 
 html[mode='light'][theme="helle"] {
@@ -72,11 +78,13 @@ html[mode='dark'][theme="helle"] {
 html[theme="helle"] {
 	--back: #9F7D94;
 	--monet2: #180E14;
+	--monet3: #9F7D94;
 }
 
 html[mode='light'][theme="moth"] {
 	--background: #DEDADE;
 	--monet: #3D3C46;
+	--monet3: #3D3C46;
 	--url: url('../images/moth.webp') no-repeat;
 }
 
@@ -89,6 +97,7 @@ html[mode='dark'][theme="moth"] {
 html[theme="moth"] {
 	--back: #949194;
 	--monet2: #090C11;
+	--monet3: #3D3C46;
 }
 
 @font-face {

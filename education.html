@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" mode="dark" theme="lily">
+<html lang="en" class="dark" mode="dark" theme="moth">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +68,23 @@
    </header>
    <body style="animation-delay: 0.1s; transition: all .5s linear 0.5s;" class="dark">
    <div id="particles-js"></div>
+   <div class="heading">
+	<div class="phone">
+	   <div id="day" onload="showTime()"></div>
+	   <div id="time" onload="showTime()"></div>
+	   <div class="music"><div class="title"><i class="fab fa-spotify"></i> Spotify</div>
+	   <div class="music_image"></div>
+	   <div class="in_music">
+	   <div id="name"></div>
+	   <div id="year"></div>
+	   <div id="player"><i class="fas fa-circle fa-xs"></i></div>
+	   <div class="btn"><i onclick="controls(0)" class="fas fa-step-backward"></i>&nbsp  <i onclick="pause(this)" class="fas fa-pause"></i>&nbsp  <i onclick="controls(1)" class="fas fa-step-forward"></i></div>
+	   </div>
+	   <div id="exper" style="margin-top: 30px;">
+	   </div>
+	</div>
+	</div>
    </body>
-   <script src="./js/main.js"></script>
+   <script type="text/javascript" src="./js/main.js"></script>
+   <script type="text/javascript" src="./js/education.js"></script>
 </html>
