@@ -289,7 +289,8 @@ ul {
 }
 
 #particles-js {
-	position: fixed;
-	height: 90%;
-	width: 100%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
