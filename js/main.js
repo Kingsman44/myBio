@@ -1,4 +1,5 @@
-var lightmode = document.getElementById('inner-switch');
+var lightmode = document.documentElement.getAttribute('mode');
+console.log(lightmode);
 
 function week() {
 	var weekday = new Array(7);
@@ -37,18 +38,26 @@ $(".inner-switch").on("click", function() {
 		$("#mode").removeClass("fa-sun-o");
 		$("#mode").addClass("fa-moon-o");
         document.documentElement.setAttribute('mode', 'light');
-        localStorage.setItem('lightmode', 'true');
+        localStorage.setItem('mode', 'light');
     } else {
         $("body").addClass("dark");
         $("html").addClass("dark");
 		$("#mode").removeClass("fa-moon-o");
 		$("#mode").addClass("fa-sun-o");
         document.documentElement.setAttribute('mode', 'dark');
-        localStorage.setItem('lightmode', 'false');
+        localStorage.setItem('mode', 'dark');
     }
 });
 
-if (localStorage.getItem('lightmode') === 'true') {
+if (!localStorage.hasOwnProperty('mode')) {
+    localStorage.setItem('mode', lightmode);
+}
+
+if (localStorage.hasOwnProperty('theme')) {
+    document.documentElement.setAttribute('theme', localStorage.getItem('theme'));
+}
+
+if (localStorage.getItem('mode') == 'light') {
     $("body").removeClass("dark");
     $("html").removeClass("dark");
 	$("#mode").removeClass("fa-sun-o");
@@ -56,12 +65,10 @@ if (localStorage.getItem('lightmode') === 'true') {
     document.documentElement.setAttribute('mode', 'light');
 } else {
     document.documentElement.setAttribute('mode', 'dark');
+	$("body").addClass("dark");
+	$("html").addClass("dark");
 	$("#mode").removeClass("fa-moon-o");
 	$("#mode").addClass("fa-sun-o");
-}
-
-if (localStorage.hasOwnProperty('theme')) {
-    document.documentElement.setAttribute('theme', localStorage.getItem('theme'));
 }
 
 var theme = document.documentElement.getAttribute('theme');

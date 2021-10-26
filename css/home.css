@@ -40,9 +40,25 @@ header {
 	margin: auto;
 	height: 540px;
 	width: 260px;
-	background: var(--url);
+	background: url('../images/phone.png') no-repeat;
 	transition: background 1.2s linear;
 	background-size: 100%;
+}
+
+.overlay {
+    display: flex;
+    position: relative;
+    float: right;
+    z-index: -1;
+    margin: auto;
+    bottom: 7px;
+    border-radius: 17px;
+    height: 474px;
+    width: 217px;
+    background-image: var(--url);
+	background-repeat: no-repeat;
+	background-size: 100%;
+    transition: background 1.2s linear;
 }
 
 @media screen and (max-width: 739px) {
@@ -50,6 +66,11 @@ header {
 		right: 2%;
 		height: 480px;
 		width: 220px;
+	}
+	.overlay {
+		height: 413px;
+		width: 192px;
+		bottom: 17px;
 	}
 	.heading .text {
 		margin-left: 2%;
@@ -64,6 +85,11 @@ header {
 		right: 1%;
 		height: 455px;
 		width: 200px;
+	}
+	.overlay {
+		bottom: 23px;
+		height: 370px;
+		width: 174px;
 	}
 	.hi {
 		font-size: 5rem !important;
@@ -88,11 +114,17 @@ header {
 		padding: 0;
 	}
 	.phone {
+		display: flex;
 		text-align: center;
-		right: 50%;
-		transform: translate(50%);
+		right: unset;
+		float: unset;
 		height: 670px;
 		width: 340px;
+	}
+	.overlay {
+		height: 622px;
+		width: 283px;
+		bottom: -11px;
 	}
 	#time {
 		top: 15% !important;

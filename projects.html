@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" mode="dark" theme="moth">
+<html lang="en" mode="light" theme="lily">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
       <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="./css/education.css">
+      <link rel="stylesheet" href="./css/projects.css">
 	  <link rel="stylesheet" href="./css/main.css">
 	  <link rel="stylesheet" href="./css/navbar.css">
 	  <script src="https://kit.fontawesome.com/becbac7640.js" crossorigin="anonymous"></script>
@@ -58,7 +58,7 @@
                      </li>
                   </ul>
                   <li class="top left"><a href="index.html">Home</a></li>
-                  <li class="top right selected"><a href="projects.html">Projects</a></li>
+                  <li class="selected top right"><a href="projects.html">Projects</a></li>
                   <li class="left"><a href="education.html">Education</a></li>
                   <li class="right"><a href="experience.html">Experience</a></li>
                </ul>
@@ -66,8 +66,21 @@
 			</b>
       </nav>
    </header>
-   <body style="animation-delay: 0.1s; transition: all .5s linear 0.5s;" class="dark">
+   <body style="animation-delay: 0.1s; transition: all .5s linear 0.5s;">
    <div id="particles-js"></div>
+   <div class="heading">
+	<div class="phone">
+	<div class="overlay"></div>
+		<div id="clockContainer">
+			<div id="hour"></div>
+			<div class="cir"></div>
+			<div id="minute"></div>
+			<div id="style"><div id="day"></div>
+			<div class="sec"></div></div>
+		</div>
+	</div>
+	</div>
    </body>
-   <script src="./js/main.js"></script>
+   <script type="text/javascript" src="./js/main.js"></script>
+   <script type="text/javascript" src="./js/projects.js"></script>
 </html>

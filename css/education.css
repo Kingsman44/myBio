@@ -46,17 +46,32 @@ html {
      font-size: 30px;
      line-height: 1;
 }
- .phone {
-     display: flex;
-     position: relative;
-     float: right;
-     right: 5%;
-     margin: auto;
-     height: 540px;
-     width: 260px;
-     background: var(--url);
-     transition: background 1.2s linear;
-     background-size: 100%;
+.phone {
+	display: flex;
+	position: relative;
+	float: right;
+	right: 5%;
+	margin: auto;
+	height: 540px;
+	width: 260px;
+	background: url('../images/phone.png') no-repeat;
+	transition: background 1.2s linear;
+	background-size: 100%;
+}
+.overlay {
+    display: flex;
+    position: relative;
+    float: right;
+    z-index: -1;
+    margin: auto;
+    bottom: 7px;
+    border-radius: 17px;
+    height: 474px;
+    width: 217px;
+    background-image: var(--url);
+	background-repeat: no-repeat;
+	background-size: 100%;
+    transition: background 1.2s linear;
 }
  @keyframes Open {
      0% {
@@ -87,14 +102,18 @@ html {
      #main {
          display:none;
     }
-     .phone {
-         display: flex;
-         text-align: center;
-         right: 50%;
-         transform: translate(50%);
-         height: 670px;
-         width: 340px;
-    }
+	.phone {
+		display: flex;
+		right: unset;
+		float: unset;
+		height: 670px;
+		width: 340px;
+	}
+	.overlay {
+		height: 622px;
+		width: 283px;
+		bottom: -11px;
+	}
      #time {
          right: 56px !important;
          font-size: 60px !important;
