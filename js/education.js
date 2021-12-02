@@ -51,12 +51,12 @@ $.each(experience, function(x, y) {
 $.each(experience, function(x, y) {
     var dat = ""
     dat += '<div  class="info1">';
-    dat += '<img src="' + experience[x]['img'] + '" style="width: 100px; height:100px; position:absolute;">';
+    dat += '<img src="' + experience[x]['img'] + '" style="width: 100px; height:100px; position:absolute; margin-top: 15px;">';
     dat += '<br><div class="text" ><div class="text1" >' + experience[x]['type'] + '</div>';
     dat += '<div class="text2">' + experience[x]['name'] + '</div>';
     dat += '<div class="text2">' + experience[x]['did'] + '</div>';
     dat += '<div class="text2">Year: ' + experience[x]['year'] + '</div>';
-    dat += '</div></div><br>';
+    dat += '</div></div>';
     $('#main').append(dat);
 });
 

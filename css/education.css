@@ -25,14 +25,17 @@ html {
      font-weight: 900;
 }
  #main {
-     margin-left: 5%;
+     margin-left: 3%;
      padding-top: 25px;
+	 display: grid;
+	 grid-template-columns: 400px repeat(1, auto);
+     gap: 10px;
      width: auto;
      z-index: 15;
 }
  .info1 {
      background-color: var(--monet);
-     width: 500px;
+     width: 400px;
      height: 150px;
      padding: 10px;
      border-radius: 10px;
@@ -57,6 +60,22 @@ html {
 	background: url('../images/phone.png') no-repeat;
 	transition: background 1.2s linear;
 	background-size: 100%;
+}
+.me {
+	/* margin-top: -10px; */
+	padding-left: 10px;
+	font-size: 1.5rem;
+	max-inline-size: 500px;
+	display: inline-block !important;
+}
+.hi {
+	font-size: 5rem;
+}
+.heading .head {
+	margin-left: 10%;
+	color: var(--monet);
+	/* font-size: 10rem; */
+	display: inline;
 }
 .overlay {
     display: flex;
@@ -87,10 +106,19 @@ html {
      animation-name: Open!important;
      animation-duration: 1s;
 }
+ @media screen and (max-width: 1200px) {
+     .phone {
+         display: none;
+    }
+ }
  @media screen and (max-width: 839px) {
      .phone {
          display: none;
     }
+	#main {
+		grid-template-columns: 95%;
+		margin-left: 5%;
+	}
      .info1 {
          width: 95%;
     }
@@ -102,6 +130,9 @@ html {
      #main {
          display:none;
     }
+	.head {
+		display: none !important;
+	}
 	.phone {
 		display: flex;
 		right: unset;
