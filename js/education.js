@@ -1,4 +1,14 @@
-const experience = [{
+const experience = [
+    {
+        img: "images/kle.png",
+        shortname: 'KLE Tech',
+        name: 'KLE Technological University',
+        year: '2021-present',
+        type: 'Graduation',
+        did: 'B.Tech Computer Science',
+        id: 'college',
+    },
+    {
         img: "images/sss10.png",
         shortname: 'BSP SSS X',
         type: 'High School',
@@ -24,15 +34,6 @@ const experience = [{
         type: 'Primary School',
         did: 'Primary School',
         id: 'dpsdurg',
-    },
-    {
-        img: "images/unknown.png",
-        shortname: 'Collge',
-        name: 'Unknown',
-        year: '2021-now',
-        type: 'Graduation',
-        did: 'B.Tech Computer Science',
-        id: 'collegeunkon',
     },
 ];
 

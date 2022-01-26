@@ -1,19 +1,38 @@
 html {
-	height: 100%;
-	box-sizing: border-box;
-	-webkit-text-size-adjust: 100%;
-	-webkit-tap-highlight-color: transparent;
-	overflow-x: hidden;
+     height: 100%;
+     box-sizing: border-box;
+     -webkit-text-size-adjust: 100%;
+     -webkit-tap-highlight-color: transparent;
+     overflow-x: hidden;
 }
-
-body {
-	background-color: var(--background);
-	font-size: 1rem;
-	overflow-x: hidden;
+ body {
+     background-color: var(--background);
+     font-size: 1rem;
+     overflow-x: hidden;
 }
-
-header {
-	position: relative;
-	padding: 2vh 0;
-	height: 150px;
+ header {
+     background-color: transparent;
+     position: relative;
+     padding: 2vh 0;
+}
+ .heading {
+     display: block;
+    margin-top: 60px;
+     font-weight: 900;
+ }
+.me {
+	/* margin-top: -10px; */
+	font-size: 1.5rem;
+	max-inline-size: 500px;
+	display: inline-block !important;
+}
+.hi {
+	font-size: 4rem;
+}
+.heading .head {
+	margin-right: 10%;
+	margin-left: 10%;
+	color: var(--monet);
+	/* font-size: 10rem; */
+	display: inline;
 }

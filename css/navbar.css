@@ -177,7 +177,7 @@
 	border-bottom: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 510px) {
 	.navbar {
 		width: 100%;
 		position: absolute;
