@@ -134,7 +134,7 @@ header {
 	}
 	#day {
 		left: unset !important;
-		right: 70px !important;
+		right: 77px !important;
 		top: 16% !important;
 	}
 	.col {
@@ -150,27 +150,27 @@ header {
 		margin-right: auto;
 	}
 	.text {
-		margin-left: 0px !important;
-		position: absolute;
-		left: 0;
-		right: 0;
-		margin-left: 20% !important;
-		margin-right: auto;
-		text-align: left;
-		top: 120px;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    text-align: center;
+	    top: 120px;
+	}
+	.hi_back {
+	    top: 101px;
+	    left: 42px;
+	    border-radius: 30px;
+	    width: 125px;
+	    background-color: var(--background);
+	    height: 73px;
+	    position: absolute;
 	}
 	.hi {
-		margin-left: 0px !important;
-		font-size: 3.5rem !important;
-		padding-left: 0px !important;
-		top: 14%;
-		text-align: center;
-		left: 73px;
-		border-radius: 30px;
-		background-color: var(--background);
-		width: 120px;
-		height: 75px;
-		right: unset;
+	    font-size: 3.5rem !important;
+	    top: 14%;
+	    align-items: center;
+	    border-radius: 30px;
+	    right: 150px;
 	}
 	.work {
 		padding-left: 0px !important;
