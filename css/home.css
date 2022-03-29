@@ -128,16 +128,21 @@ header {
 	}
 	#time {
 		top: 15% !important;
+		left: unset !important;
+		right: 45px !important;
+		border-radius: 30px !important;
 	}
 	#day {
+		left: unset !important;
+		right: 70px !important;
 		top: 16% !important;
 	}
 	.col {
-		height: 190px;
+		height: 130px;
 		width: 260px;
 		background-color: var(--background);
 		border-radius: 30px;
-		top: 195px;
+		top: 185px;
 		position: fixed;
 		left: 0;
 		right: 0;
@@ -149,25 +154,32 @@ header {
 		position: absolute;
 		left: 0;
 		right: 0;
-		margin-left: auto;
+		margin-left: 20% !important;
 		margin-right: auto;
-		text-align: center;
+		text-align: left;
 		top: 120px;
 	}
 	.hi {
 		margin-left: 0px !important;
-		font-size: 4rem !important;
+		font-size: 3.5rem !important;
 		padding-left: 0px !important;
-		top: 200px;
+		top: 14%;
+		text-align: center;
+		left: 73px;
+		border-radius: 30px;
+		background-color: var(--background);
+		width: 120px;
+		height: 75px;
+		right: unset;
 	}
 	.work {
 		padding-left: 0px !important;
-		font-size: 18px!important;
-		top: 308px;
+		font-size: 17px!important;
+		top: 235px;
 	}
 	.me {
 		line-height: 1;
-		top: 300px;
+		top: 227px;
 		font-size: 2.1rem !important;
 		padding-left: 0px !important;
 	}
@@ -179,13 +191,18 @@ header {
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
-		top: 335px;
+		top: 265px;
 	}
 	.theme-icon {
-		top: 85% !important;
+		top: 360px !important;
 	}
 	.themes {
-		top: 80% !important;
+	    top: 328px !important;
+	    z-index: -1;
+	    padding-top: 4px;
+	    border-radius: 30px !important;
+	    height: 72px !important;
+	    width: 260px !important;
 	}
 }
 

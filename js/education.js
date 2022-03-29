@@ -3,7 +3,7 @@ const experience = [
         img: "images/kle.png",
         shortname: 'KLE Tech',
         name: 'KLE Technological University',
-        year: '2021-present',
+        year: '2021-2025',
         type: 'Graduation',
         did: 'B.Tech Computer Science',
         id: 'college',
@@ -36,6 +36,7 @@ const experience = [
         id: 'dpsdurg',
     },
 ];
+
 
 $.each(experience, function(x, y) {
     var dat = ""
@@ -160,7 +161,9 @@ function change(a) {
     var classes = document.getElementsByClassName('info');
     for (var i = 0; i < classes.length; i++) {
         classes[i].classList.remove("open");
+        classes[i].classList.remove("full");
     }
+    $('.' + a).addClass('full');
     $('.' + a).addClass("open_anim");
     $('.' + a).addClass("open");
     var wait = window.setTimeout(function() {

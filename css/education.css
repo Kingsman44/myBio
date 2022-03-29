@@ -5,12 +5,25 @@ html {
      -webkit-tap-highlight-color: transparent;
      overflow-x: hidden;
 }
- body {
+
+html[mode='light'][theme="helle"] #time {
+    --monet3: var(--background); 
+}
+
+html[mode='dark'][theme="orchid"] #time {
+    --monet3:#590a0b;
+}
+
+html[mode='dark'][theme="lily"] #time {
+    --monet3:#4a510f;
+}
+
+body {
      background-color: var(--background);
      font-size: 1rem;
      overflow-x: hidden;
 }
- header {
+header {
      background-color: transparent;
      position: relative;
     /* height: 150px;
@@ -216,15 +229,17 @@ html {
      .btn i {
          cursor: pointer;
     }
-     .info {
-         padding: 5px 15px;
-         height: auto;
-         width: 270px;
-         margin-top: 5px;
-         border-radius: 10px;
-         text-align: left;
-         color: var(--monet);
-         background: var(--background);
+    .info {
+        padding: 5px 15px;
+        height: auto;
+        width: 132px;
+        margin-top: 5px;
+        margin-left: 2px;
+        border-radius: 10px;
+        text-align: left;
+        display: inline-block;
+        color: var(--monet);
+        background: var(--background);
     }
      .info.open {
          padding: 15px!important;
@@ -271,4 +286,7 @@ html {
      margin-right: auto;
      top: 13%;
      z-index: 2;
+}
+.full {
+    width: 265px !important;
 }
