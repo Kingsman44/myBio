@@ -21,7 +21,7 @@ header {
 .heading {
 	/* color: var(--monet); */
 	display: block;
-	margin-top: 60px;
+	margin-top: 35px;
 	font-weight: 900;
 }
 
@@ -75,6 +75,12 @@ header {
 	.heading .text {
 		margin-left: 2%;
 	}
+	.lan {
+		margin-left: 3.5% !important;
+	}
+	.graph {
+		left: 160px !important;
+	}
 	.social {
 		margin-left: 2% !important;
 	}
@@ -106,6 +112,9 @@ header {
 	}
 	.themes {
 		top: 67% !important;
+	}
+	.graph {
+		left: 120px !important;
 	}
 }
 
@@ -167,7 +176,7 @@ header {
 	}
 	.hi {
 	    font-size: 3.5rem !important;
-	    top: 14%;
+	    top: 13%;
 	    align-items: center;
 	    border-radius: 30px;
 	    right: 150px;
@@ -193,11 +202,51 @@ header {
 		text-align: center;
 		top: 265px;
 	}
+	.lan {
+		margin-left: 0px !important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		top: 328px;
+	}
+	.ph_fix {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    margin-top: 10px;
+	}
+	.col1 {
+		height: 178px;
+		width: 260px;
+		background-color: var(--background);
+		border-radius: 30px;
+		top: 328px;
+		position: fixed;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.lan b {
+		font-size: 1.2rem !important;
+	}
+	.lan li {
+	    margin-left: 2px;
+	    width: 240px;
+	    display: flex;
+	    flex-wrap: nowrap;
+	    justify-content: space-between;
+	    align-content: flex-end;
+	    align-items: center;
+	}
 	.theme-icon {
-		top: 360px !important;
+		top: 552px !important;
 	}
 	.themes {
-	    top: 328px !important;
+	    top: 518px !important;
 	    z-index: -1;
 	    padding-top: 4px;
 	    border-radius: 30px !important;
@@ -335,4 +384,53 @@ header {
 
 .main_icon svg {
 	fill: var(--monet);
+}
+
+.lan {
+	color: var(--monet);
+	margin-left: 11%;
+}
+
+.lan b {
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+.lan li {
+	margin-left: 2px;
+}
+
+.graph {
+    display: inline-block;
+    height: 10px;
+    width: 150px;
+    background-color: var(--monet);
+    border-radius: 2px;
+    margin-top: 6px;
+    left: 240px;
+    font-size: 8px;
+    text-align: right;
+    text-anchor: middle;
+    padding-right: 5px;
+    color: var(--background);
+    position: sticky;
+}
+
+.l1 {
+	width: 60px !important;
+}
+.l2 {
+	width: 75px !important;
+}
+.l3 {
+	width: 90px !important;
+}
+.l4 {
+	width: 105px !important;
+}
+.l5 {
+	width: 120px !important;
+}
+.l6 {
+	width: 135px !important;
 }
