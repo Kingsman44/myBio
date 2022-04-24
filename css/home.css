@@ -202,6 +202,9 @@ header {
 		text-align: center;
 		top: 265px;
 	}
+	.graph {
+		display: block !important;
+	}
 	.lan {
 		margin-left: 0px !important;
 		position: absolute;
@@ -402,22 +405,25 @@ header {
 
 .graph {
     display: inline-block;
-    height: 10px;
+    height: 1rem;
     width: 150px;
     background-color: var(--monet);
     border-radius: 2px;
     margin-top: 6px;
     left: 240px;
-    font-size: 8px;
-    text-align: right;
-    text-anchor: middle;
-    padding-right: 5px;
     color: var(--background);
     position: sticky;
 }
 
+.lc {
+    margin-top: .1rem !important;
+    margin-bottom: 4px;
+    height: .82rem;
+    margin-inline-start: 1.5px;
+    background-color: var(--background) !important;
+}
 .l1 {
-	width: 60px !important;
+    width: 60px !important;
 }
 .l2 {
 	width: 75px !important;
