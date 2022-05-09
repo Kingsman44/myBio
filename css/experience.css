@@ -36,3 +36,117 @@ html {
 	/* font-size: 10rem; */
 	display: inline;
 }
+.lan {
+     color: var(--monet);
+     margin-left: 10%;
+}
+
+.lan b {
+     font-size: 2rem;
+     font-weight: 900;
+}
+
+.lan li {
+     margin-left: 2px;
+     font-weight: 900;
+}
+
+.graph {
+    display: inline-block;
+    height: 1rem;
+    width: 150px;
+    background-color: var(--monet);
+    border-radius: 2px;
+    margin-top: 6px;
+    vertical-align: text-top;
+    left: 240px;
+    color: var(--background);
+    position: sticky;
+}
+
+.lc {
+    margin-top: .1rem !important;
+    margin-bottom: 4px;
+    height: .82rem;
+    margin-inline-start: 1.5px;
+    background-color: var(--background) !important;
+}
+.l1 {
+    width: 60px !important;
+}
+.l2 {
+     width: 75px !important;
+}
+.l3 {
+     width: 90px !important;
+}
+.l4 {
+     width: 105px !important;
+}
+.l5 {
+     width: 120px !important;
+}
+.l6 {
+     width: 135px !important;
+}
+#main {
+    justify-content: center;
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: auto-fill;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 10px;
+    width: 100%;
+    z-index: 15;
+}
+ .info1 {
+     background-color: var(--monet);
+     width: 200px;
+     height: 170px;
+     padding: 10px;
+     border-radius: 10px;
+}
+ .text2 {
+     font-weight: 900;
+     color: var(--background)
+}
+.c_head {
+     text-align: center;
+     font-size: 2rem;
+     font-weight: 900;
+     color: var(--monet);
+}
+.popupContainer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      overflow: auto;
+}
+ .popupContainer .popUpBackground {
+      transition: all 0.3s ease-in-out;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+}
+ .popupContainer .popUpBackground.active {
+     z-index: 998;
+      background-color: rgba(0, 0, 0, 0.5);
+}
+ .popupContainer .popImage {
+     z-index: 999;
+      position: relative;
+      display: block;
+      transition: all 0.3s ease-in-out;
+      border-radius: 6px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+.info1 img{
+     cursor: pointer;
+}
+.zen {
+     z-index: unset !important;
+}
