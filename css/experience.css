@@ -150,3 +150,8 @@ html {
 .zen {
      z-index: unset !important;
 }
+@media screen and (max-width: 399px) {
+     .graph {
+          left: 200px;
+     }
+}
