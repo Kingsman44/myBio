@@ -146,6 +146,7 @@ html {
 }
 .info1 img{
      cursor: pointer;
+     border-radius: 6px;
 }
 .zen {
      z-index: unset !important;
