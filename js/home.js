@@ -89,3 +89,8 @@ if (allElements.length > 0) {
         }
     });
 }
+
+$(".lc").addClass("lk")
+setTimeout(() => {
+$(".lc").removeClass("lk")
+}, 1000);

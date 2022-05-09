@@ -422,22 +422,29 @@ header {
     height: .82rem;
     margin-inline-start: 1.5px;
     background-color: var(--background) !important;
+     -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+.lk {
+     width: 0px !important;
 }
 .l1 {
-    width: 60px !important;
+    width: 60px;
 }
 .l2 {
-	width: 75px !important;
+     width: 75px;
 }
 .l3 {
-	width: 90px !important;
+     width: 90px;
 }
 .l4 {
-	width: 105px !important;
+     width: 105px;
 }
 .l5 {
-	width: 120px !important;
+     width: 120px;
 }
 .l6 {
-	width: 135px !important;
+     width: 135px;
 }
