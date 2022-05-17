@@ -26,7 +26,6 @@ header {
 }
 
 .heading .text {
-	margin-left: 10%;
 	color: var(--monet);
 	/* font-size: 10rem; */
 	display: inline;
@@ -61,6 +60,12 @@ header {
     transition: background 1.2s linear;
 }
 
+@media screen and (max-width: 950px) {
+	.my_info {
+		margin-left: 8.5% !important;
+	}
+}
+
 @media screen and (max-width: 739px) {
 	.phone {
 		right: 2%;
@@ -72,17 +77,24 @@ header {
 		width: 192px;
 		bottom: 17px;
 	}
+	.profile {
+		margin-left: 2% !important;
+	}
+	.my_info {
+		margin-left: 2% !important;
+	}
+	.me {
+		padding-left: 0px !important;
+	}
+	.work {
+		padding-left: 0px !important;
+	}
 	.heading .text {
 		margin-left: 2%;
 	}
-	.lan {
-		margin-left: 3.5% !important;
-	}
-	.graph {
-		left: 160px !important;
-	}
 	.social {
 		margin-left: 2% !important;
+		padding-left: 0px !important;
 	}
 }
 
@@ -113,8 +125,20 @@ header {
 	.themes {
 		top: 67% !important;
 	}
-	.graph {
-		left: 120px !important;
+}
+
+@media screen and (max-width: 580px) {
+	.phone {
+		display: none;
+	}
+	.hi {
+		margin-left: 7% !important;
+	}
+	.my_info {
+		margin-left: 8% !important;
+	}
+	.profile {
+		margin-left: 10% !important;
 	}
 }
 
@@ -136,22 +160,22 @@ header {
 		bottom: -11px;
 	}
 	#time {
-		top: 15% !important;
+		top: 81px !important;
 		left: unset !important;
 		right: 45px !important;
 		border-radius: 30px !important;
 	}
 	#day {
 		left: unset !important;
-		right: 77px !important;
-		top: 16% !important;
+		right: 70px !important;
+		top: 89px !important;
 	}
 	.col {
 		height: 130px;
 		width: 260px;
 		background-color: var(--background);
 		border-radius: 30px;
-		top: 185px;
+		top: 432px;
 		position: fixed;
 		left: 0;
 		right: 0;
@@ -163,20 +187,20 @@ header {
 	    left: 0;
 	    right: 0;
 	    text-align: center;
-	    top: 120px;
+	    top: 100px;
 	}
 	.hi_back {
-	    top: 101px;
+	    top: 81px;
 	    left: 42px;
 	    border-radius: 30px;
 	    width: 125px;
 	    background-color: var(--background);
-	    height: 73px;
+	    height: 76px;
 	    position: absolute;
 	}
 	.hi {
 	    font-size: 3.5rem !important;
-	    top: 13%;
+	    top: 79px;
 	    align-items: center;
 	    border-radius: 30px;
 	    right: 150px;
@@ -184,11 +208,11 @@ header {
 	.work {
 		padding-left: 0px !important;
 		font-size: 17px!important;
-		top: 235px;
+		top: 487px;
 	}
 	.me {
 		line-height: 1;
-		top: 227px;
+		top: 477px;
 		font-size: 2.1rem !important;
 		padding-left: 0px !important;
 	}
@@ -200,20 +224,7 @@ header {
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
-		top: 265px;
-	}
-	.graph {
-		display: block !important;
-	}
-	.lan {
-		margin-left: 0px !important;
-		position: absolute;
-		left: 0;
-		right: 0;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-		top: 328px;
+		top: 512px;
 	}
 	.ph_fix {
 	    display: flex;
@@ -222,34 +233,29 @@ header {
 	    margin-top: 10px;
 	}
 	.col1 {
-		height: 178px;
+		height: 260px;
 		width: 260px;
 		background-color: var(--background);
 		border-radius: 30px;
-		top: 328px;
+		top: 165px;
 		position: fixed;
 		left: 0;
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.lan b {
-		font-size: 1.2rem !important;
-	}
-	.lan li {
-	    margin-left: 2px;
-	    width: 240px;
-	    display: flex;
-	    flex-wrap: nowrap;
-	    justify-content: space-between;
-	    align-content: flex-end;
-	    align-items: center;
+	.profile {
+	    position: absolute !important;
+	    top: 190px;
+	    left: 0;
+	    right: 0;
+	    margin: auto !important;
 	}
 	.theme-icon {
-		top: 552px !important;
+		top: 602px !important;
 	}
 	.themes {
-	    top: 518px !important;
+	    top: 570px !important;
 	    z-index: -1;
 	    padding-top: 4px;
 	    border-radius: 30px !important;
@@ -260,6 +266,7 @@ header {
 
 .hi {
 	font-size: 10rem;
+	margin-left: 10%;
 }
 
 .work {
@@ -370,7 +377,6 @@ header {
 .social {
 	padding-top: 10px;
 	padding-left: 10px;
-	margin-left: 10%;
 }
 
 .social li {
@@ -384,67 +390,76 @@ header {
 .social svg {
 	fill: var(--monet);
 }
-
+.social svg:hover {
+	transform: scale(1.1);
+}
 .main_icon svg {
 	fill: var(--monet);
 }
-
-.lan {
-	color: var(--monet);
-	margin-left: 11%;
+.profile {
+	position: relative;
+	display: inline-block;
+	margin-left: 10%;
+	height: 200px;
+	width: 200px;
+	background: url('../images/profile-pic.png') no-repeat;
+	background-size: 100%;
+	/*border-radius: 20px;*/
+	border: 2px solid var(--monet);
+}
+.profile::before, .profile::after, .profile span::before, .profile span::after {
+    display: block;
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
 }
 
-.lan b {
-	font-size: 2rem;
-	font-weight: 900;
+.profile::before {
+    top: -5px;
+    left: -5px;
+    border-top: 8px solid var(--monet);
+    border-left: 8px solid var(--monet);
+    transition: 1s all;
+    border-radius: 5px;
+}
+.profile::after {
+    top: -5px;
+    right: -5px;
+    border-top: 8px solid var(--monet);
+    border-right: 8px solid var(--monet);
+    transition: 1s all;
+    border-radius: 5px;
+}
+.profile span::before {
+    bottom: -5px;
+    left: -5px;
+    border-bottom: 8px solid var(--monet);
+    border-left: 8px solid var(--monet);
+    transition: 1s all;
+    border-radius: 5px;
+}
+.profile span::after {
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 8px solid var(--monet);
+    border-right: 8px solid var(--monet);
+    transition: 1s all;
+    border-radius: 5px;
 }
 
-.lan li {
-	margin-left: 2px;
+.profile:hover::before, .profile:hover::after {
+    width: 200px;
+    height: 200px;
 }
 
-.graph {
+.profile:hover span::before, .profile:hover span::after {
+    width: 200px;
+    height: 200px;
+}
+.my_info {
     display: inline-block;
-    height: 1rem;
-    width: 150px;
-    background-color: var(--monet);
-    border-radius: 2px;
-    margin-top: 6px;
-    vertical-align: text-top;
-    left: 240px;
-    color: var(--background);
-    position: sticky;
-}
-
-.lc {
-    margin-top: .1rem !important;
-    margin-bottom: 4px;
-    height: .82rem;
-    margin-inline-start: 1.5px;
-    background-color: var(--background) !important;
-     -webkit-transition: width 1s ease-in-out;
-    -moz-transition: width 1s ease-in-out;
-    -o-transition: width 1s ease-in-out;
-    transition: width 1s ease-in-out;
-}
-.lk {
-     width: 0px !important;
-}
-.l1 {
-    width: 60px;
-}
-.l2 {
-     width: 75px;
-}
-.l3 {
-     width: 90px;
-}
-.l4 {
-     width: 105px;
-}
-.l5 {
-     width: 120px;
-}
-.l6 {
-     width: 135px;
+    width: 350px;
+    margin-left: 15px;
+    vertical-align: top;
 }
