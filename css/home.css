@@ -457,6 +457,16 @@ header {
     width: 200px;
     height: 200px;
 }
+
+.profile_anim::before, .profile_anim::after {
+    width: 200px;
+    height: 200px;
+}
+
+.profile_anim span::before, .profile_anim span::after {
+    width: 200px;
+    height: 200px;
+}
 .my_info {
     display: inline-block;
     width: 370px;
