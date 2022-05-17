@@ -60,7 +60,7 @@ header {
     transition: background 1.2s linear;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 960px) {
 	.my_info {
 		margin-left: 8.5% !important;
 	}
@@ -459,7 +459,7 @@ header {
 }
 .my_info {
     display: inline-block;
-    width: 350px;
+    width: 370px;
     margin-left: 15px;
     vertical-align: top;
 }
