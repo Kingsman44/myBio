@@ -92,7 +92,6 @@ function initImagePopup(elem){
 }
 
 initImagePopup(".info1")
-$(".lc").addClass("lk")
 setTimeout(() => {
 $(".lc").removeClass("lk")
 }, 1000);
