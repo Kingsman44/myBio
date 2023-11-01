@@ -96,6 +96,8 @@ html[mode='dark'][theme="moth"] {
 	--background: #090C11;
 	--monet: #BFCADB;
 	--url: url('../images/moth-dark.jpg');
+	/* --bwidth: 336px;
+	--btop:  */
 }
 
 html[theme="moth"] {

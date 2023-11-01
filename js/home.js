@@ -24,7 +24,6 @@ function showTime() {
 showTime();
 
 // Currently Working on Text Animation
-
 const allElements = document.querySelectorAll('.animated-text');
 
 if (allElements.length > 0) {
@@ -89,6 +88,31 @@ if (allElements.length > 0) {
         }
     });
 }
+
+setInterval(() => {
+    d = new Date(); //object of date()
+    hr = d.getHours();
+    min = d.getMinutes();
+    sec = d.getSeconds();
+    weekday = week();
+	var da = String(d.getDate()).padStart(2, '0');
+    var day = weekday[d.getDay()];
+    hr_rotation = 30 * hr + min / 2; //converting current time
+    min_rotation = 6 * min;
+    sec_rotation = 6 * sec;
+	
+	if (screen.width < 501) {
+		hr_rotation = hr_rotation - 90;
+		min_rotation = min_rotation - 90;
+		sec_rotation =sec_rotation - 90;
+	}
+  
+	var n= day + ' ' + da
+	$('#day2').empty().append(n)
+    hour.style.transform = `rotate(${hr_rotation}deg)`;
+    minute.style.transform = `rotate(${min_rotation}deg)`;
+    style.style.transform = `rotate(${sec_rotation}deg)`;
+}, 1000);
 
 setTimeout(() => {
 $(".profile").removeClass("profile_anim")
